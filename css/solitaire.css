@@ -1,0 +1,87 @@
+	html{
+		width:100%;
+		height:100%;
+		margin:0px;
+		padding:0px;		
+	}
+	
+	body{
+		background-color:#97CA97;
+		width:100%;
+		height:100%;
+		font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+		margin:0px;
+		padding:0px;
+	}
+	
+	a{
+		color:#FF0000;
+		text-decoration:none;
+		padding:10px;
+	}
+	
+	img {
+		position: absolute;
+		top: 0px;
+		padding: 1px 1px 1px 1px; 
+		border: 1px solid #000000;
+		background-color: #FFF;	
+	}
+	
+	.card{
+		width:71px;
+		height:96px;		
+		background-color: #FFF;
+		padding-top:0px;	
+		padding-left:0px;	
+		position:absolute;
+		left:0px;
+		top:0px;
+		overflow:visible;
+	}
+	
+	.deck{
+    width:250px;
+		height:150px;
+		position:absolute;
+		left:20px;
+		top:20px;	
+	}
+	
+	.deck_hidden{
+		width:72px;
+		height:100px;
+		left:30px;
+		top:22px;
+		position:absolute;
+		border:1px dotted #CCC;
+		background-color: #ACD5AC;
+	}
+	
+	.deck_shown{
+		width:72px;
+		height:100px;
+		left:120px;
+		top:22px;
+		position:absolute;
+		border:1px dotted #CCC;
+		background-color: #ACD5AC;
+	}
+
+	.aces{
+		/*background-image:url('images/bg_aces1.gif');*/
+		width:450px;
+		height:150px;
+		position:absolute;
+		left:310px;
+		top:20px;
+	}
+	 
+	.seven{
+		/* background-image:url('images/bg_seven1.gif'); */
+		width:750px;
+		height:150px;
+		position:absolute;
+		left:15px;
+		top:210px;		
+	}
