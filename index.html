@@ -3,14 +3,15 @@
 
 <head>
 	<title>Javascript solitaire</title>
-	<link rel="stylesheet" href="css/solitaire.css" media="screen"></LINK>
-	
-	<script src="js/model.js"></script>
-	<!--<script type="text" src="dragndrop_old.js"></script> -->
-	<script src="js/DnD.js"></script>
+	<link rel="stylesheet" href="css/reset.css" type="text/css"></link>
+	<link rel="stylesheet" href="css/solitaire.css" type="text/css"></link>
 </head>
+
 <body>
+
+<p> Solitaire </p>
 <input type="button" value="Reset" onclick="resetGame()"  class="button">
+
 <div class="aces" id="js_aces"></div>
 
 <div class="seven" id="js_seven"></div>
@@ -20,9 +21,10 @@
 	<div class="deck_shown" id="js_deck_shown"></div>
 </div>
 
-<SCRIPT type="text/javascript">
-	window.onload = initSolitaire;	
-	</script>
+<script src="js/card.js"></script>
+<script src="js/dealCard.js"></script>
+<script src="js/DnD1.js"></script>
+
 </body>
 
 </html>
