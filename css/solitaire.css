@@ -1,10 +1,4 @@
-	html{
-		width:100%;
-		height:100%;
-		margin:0px;
-		padding:0px;		
-	}
-	
+
 	body{
 		background-color:#97CA97;
 		width:100%;
@@ -12,6 +6,19 @@
 		font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
 		margin:0px;
 		padding:0px;
+	}
+	
+	p {
+		margin: auto;
+		font-size: 200%;
+		font-family: Comic Sans, Comic Sans MS, cursive, tahoma;
+		text-align: center;
+	}
+	
+	input {
+		font-size: 150%;
+		border-radius: 5px;
+		
 	}
 	
 	a{
@@ -25,7 +32,15 @@
 		top: 0px;
 		padding: 1px 1px 1px 1px; 
 		border: 1px solid #000000;
-		background-color: #FFF;	
+		background-color: #FFF;
+		border-radius: 4px;		
+	}
+	
+	img.cover {
+		position: absolute;
+		padding-left: 0px;
+		padding-right: 0px;
+		
 	}
 	
 	.card{
@@ -38,20 +53,21 @@
 		left:0px;
 		top:0px;
 		overflow:visible;
+		border-radius: 4px;
 	}
-	
+
 	.deck{
-    width:250px;
+		width:250px;
 		height:150px;
 		position:absolute;
 		left:20px;
-		top:20px;	
+		top:100px;	
 	}
 	
 	.deck_hidden{
 		width:72px;
 		height:100px;
-		left:30px;
+		left:45px;
 		top:22px;
 		position:absolute;
 		border:1px dotted #CCC;
@@ -61,7 +77,7 @@
 	.deck_shown{
 		width:72px;
 		height:100px;
-		left:120px;
+		left:170px;
 		top:22px;
 		position:absolute;
 		border:1px dotted #CCC;
@@ -69,19 +85,36 @@
 	}
 
 	.aces{
-		/*background-image:url('images/bg_aces1.gif');*/
 		width:450px;
 		height:150px;
 		position:absolute;
 		left:310px;
-		top:20px;
+		top:100px;
+	}
+	
+	div.ace {
+		width: 72px;
+		height: 98px;
+		position: absolute;
+		top: 20px;
+		border: 1px dotted #CCC;
+		background-color: #ACD5AC;
 	}
 	 
 	.seven{
-		/* background-image:url('images/bg_seven1.gif'); */
 		width:750px;
 		height:150px;
 		position:absolute;
 		left:15px;
-		top:210px;		
+		top:300px;		
 	}
+	
+	div[id*="js_seven_card"] {
+		width: 74px;
+		height: 100px;
+		position: absolute;
+		top: 20px;
+		background-color: #ACD5AC;
+	}
+	
+	
