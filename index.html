@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<title>Javascript solitaire</title>
+	<link rel="stylesheet" href="css/solitaire.css" media="screen"></LINK>
+	
+	<script src="js/model.js"></script>
+	<!--<script type="text" src="dragndrop_old.js"></script> -->
+	<script src="js/DnD.js"></script>
+</head>
+<body>
+<input type="button" value="Reset" onclick="resetGame()"  class="button">
+<div class="aces" id="js_aces"></div>
+
+<div class="seven" id="js_seven"></div>
+
+<div class="deck">
+	<div class="deck_hidden" id="js_deck_hidden"></div>
+	<div class="deck_shown" id="js_deck_shown"></div>
+</div>
+
+<SCRIPT type="text/javascript">
+	window.onload = initSolitaire;	
+	</script>
+</body>
+
+</html>
