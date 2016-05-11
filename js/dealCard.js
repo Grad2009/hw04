@@ -1,9 +1,6 @@
 window.onload = startGame();
 
-var cardCounter  = 0,
-	canRestartDeck;
-
-function startGame() {
+	function startGame() {
 		for(var suit in card.suites) {
 			for(var value in card.values){
 				createCard (suit, value);
@@ -32,21 +29,20 @@ function startGame() {
 	}
 	
 	function dealCards() {
-		var cardCounter = 0;
 		for(var sevenSetCount=0;sevenSetCount<board.sevenArray.length;sevenSetCount++){
 			for(var cardCount=sevenSetCount;cardCount<board.sevenArray.length;cardCount++){
 				var obj = document.getElementById('js_seven_card'+cardCount);
 				var subs = obj.getElementsByTagName('DIV');
 				if(subs.length==0){
-					obj.appendChild(card.Arrays[cardCounter]);
-					card.Arrays[cardCounter].style.top = '0px';
+					obj.appendChild(card.Arrays[card.counter]);
+					card.Arrays[card.counter].style.top = '0px';
 				}else{
-					subs[subs.length-1].appendChild(card.Arrays[cardCounter]);	
-					card.Arrays[cardCounter].style.top = '20px';
+					subs[subs.length-1].appendChild(card.Arrays[card.counter]);	
+					card.Arrays[card.counter].style.top = '20px';
 				}
 				
-				if(cardCount==sevenSetCount)showCard(card.Arrays[cardCounter]);
-				cardCounter++;
+				if(cardCount==sevenSetCount)showCard(card.Arrays[card.counter]);
+				card.counter++;
 			}			
 		}		
 	}
@@ -88,8 +84,8 @@ function startGame() {
 				subDivs[innerDeckCount].style.left = '0px'; 
 				document.getElementById('js_deck_shown').appendChild(subDivs[innerDeckCount]);
 			
-			canRestartDeck = false;
-			setTimeout('canRestartDeck = true', 500);
+			board.canRestartDeck = false;
+			setTimeout('board.canRestartDeck = true', 500);
 			
 			return false;
 		}
@@ -97,19 +93,19 @@ function startGame() {
 		
 	function restartDeck() {
 
-		if(this.id=='js_deck_hidden'){
+		if(this.id === 'js_deck_hidden'){
 			var parentObj = document.getElementById('js_deck_shown');
 		} else {
 			parentObj = getTopDiv(this);
 		}
-		if(parentObj.id === 'js_deck_shown' && canRestartDeck){
+		if(parentObj.id === 'js_deck_shown' && board.canRestartDeck){
 
 			var destObj = document.getElementById('js_deck_hidden');
 			var subDivs = destObj.getElementsByTagName('DIV');
 			if(subDivs.length === 0){
 
 				var movingCards = parentObj.getElementsByTagName('DIV');
-				canRestartDeck = false;
+				board.canRestartDeck = false;
 				for(var no = movingCards.length-1; no>=0; no--) {
 					coverCard(movingCards[no]);		
 					movingCards[no].style.left = '0px';			
