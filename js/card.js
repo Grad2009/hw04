@@ -5,10 +5,12 @@ var card = {};
 	card.colors = {'s':0,'d':1,'h':1,'c':0};
 	card.values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 	card.Arrays = [];
+	card.counter = 0;
 		
 var board = {
 	acesArray: [],
-	sevenArray: []
+	sevenArray: [],
+	canRestartDeck: false
 }
 
 
